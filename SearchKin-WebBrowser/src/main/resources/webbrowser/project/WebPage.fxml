@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="webbrowser.project.WebPageController">
+   <children>
+      <WebView fx:id="webView" layoutY="73.0" prefWidth="863.0" />
+      <TextField fx:id="textfield2" layoutX="194.0" layoutY="357.0" prefHeight="26.0" prefWidth="473.0" promptText="Search Here">
+         <font>
+            <Font name="Constantia" size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="searchButton" layoutX="397.0" layoutY="406.0" mnemonicParsing="false" onAction="#searchButtonAction" style="-fx-background-color: #ff5c00;" text="Search" textFill="#f6f4f4">
+         <font>
+            <Font name="Constantia" size="14.0" />
+         </font>
+      </Button>
+      <ToolBar prefHeight="73.0" prefWidth="863.0" style="-fx-background-color: #f0ffff;">
+         <items>
+            <Button mnemonicParsing="false" onAction="#refreshPage" style="-fx-background-color: #ff5c00;" text="Refresh" textFill="WHITE">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#displayHistory" style="-fx-background-color: #ff5c00;" text="History" textFill="WHITE">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font></Button>
+            <Button fx:id="home" mnemonicParsing="false" onAction="#homeAction" style="-fx-background-color: #ff5c00;" text="Home" textFill="WHITE">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font></Button>
+            <TextField fx:id="textField" prefHeight="26.0" prefWidth="394.0" promptText="Search Google or Type a URL">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font>
+            </TextField>
+            <Button fx:id="sea" mnemonicParsing="false" onAction="#seaButtonAction" style="-fx-background-color: #ff5c00;" text="Go" textFill="WHITE">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#zoomIn" style="-fx-background-color: #ff5c00;" text="+" textFill="WHITE">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#zoomOut" style="-fx-background-color: #ff5c00;" text="-" textFill="#fffefe">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#back" style="-fx-background-color: #ff5c00;" text="&lt;-" textFill="WHITE">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#forward" style="-fx-background-color: #ff5c00;" text="-&gt;" textFill="WHITE">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font></Button>
+            <Button fx:id="about" mnemonicParsing="false" onAction="#aboutAction" style="-fx-background-color: #ff5c00;" text="About" textFill="#ffffff">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="incognitoid" mnemonicParsing="false" onAction="#incognitoAction" style="-fx-background-color: #ff5c00;" text="Incognito" textFill="WHITE">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font>
+            </Button>
+         </items>
+      </ToolBar>
+      <Label fx:id="labels" alignment="CENTER" layoutX="306.0" layoutY="234.0" prefHeight="102.0" prefWidth="247.0" text="SearchKin" textAlignment="CENTER" textFill="#ff5c00">
+         <font>
+            <Font name="Constantia" size="48.0" />
+         </font>
+      </Label>
+      <Pane fx:id="pane" layoutX="14.0" layoutY="78.0" prefHeight="248.0" prefWidth="362.0" style="-fx-background-color: #f0ffff;">
+         <children>
+            <TextArea fx:id="textArea" layoutX="-1.0" prefHeight="198.0" prefWidth="362.0">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font></TextArea>
+            <Button layoutX="14.0" layoutY="209.0" mnemonicParsing="false" onAction="#clear_history" style="-fx-background-color: #ff5c00;" text="Clear History" textFill="WHITE">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font></Button>
+            <Button layoutX="272.0" layoutY="209.0" mnemonicParsing="false" onAction="#exit_history" style="-fx-background-color: #ff5c00;" text="Exit History" textFill="WHITE">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font></Button>
+         </children>
+      </Pane>
+      <Pane fx:id="bookmarkpane" layoutX="195.0" layoutY="446.0" prefHeight="221.0" prefWidth="474.0">
+         <children>
+            <Button fx:id="facebook" layoutX="34.0" layoutY="26.0" mnemonicParsing="false" onAction="#facebook_action" style="-fx-background-color: rgba(0,0,0,0);">
+               <graphic>
+                  <FontAwesomeIconView fill="#056df6" glyphName="FACEBOOK" size="50" />
+               </graphic>
+            </Button>
+            <Button fx:id="twitter" layoutX="108.0" layoutY="26.0" mnemonicParsing="false" onAction="#twitter_Action" style="-fx-background-color: rgba(0,0,0,0);">
+               <graphic>
+                  <FontAwesomeIconView fill="#07aff5" glyphName="TWITTER" size="50" />
+               </graphic>
+            </Button>
+            <Button fx:id="youtube" layoutX="401.0" layoutY="26.0" mnemonicParsing="false" onAction="#youtube_Action" style="-fx-background-color: rgba(0,0,0,0);">
+               <graphic>
+                  <FontAwesomeIconView fill="#f50707" glyphName="YOUTUBE" size="50" />
+               </graphic>
+            </Button>
+            <Button fx:id="instagram" layoutX="326.0" layoutY="26.0" mnemonicParsing="false" onAction="#instagram_Action" style="-fx-background-color: rgba(0,0,0,0);">
+               <graphic>
+                  <FontAwesomeIconView glyphName="INSTAGRAM" size="50">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.44696968161698547" startY="0.23106062051021692">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.9578947424888611" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </FontAwesomeIconView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

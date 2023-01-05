@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="webbrowser.project.IncognitoController">
+   <children>
+      <WebView fx:id="webView" layoutY="73.0" prefWidth="863.0" />
+      <TextField fx:id="textfield2" layoutX="194.0" layoutY="357.0" prefHeight="26.0" prefWidth="473.0" promptText="Search Here">
+         <font>
+            <Font name="Constantia" size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="searchButton" layoutX="397.0" layoutY="406.0" mnemonicParsing="false" onAction="#searchButtonAction" style="-fx-background-color: #ff0000;" text="Search" textFill="#f6f4f4">
+         <font>
+            <Font name="Constantia" size="14.0" />
+         </font>
+      </Button>
+      <ToolBar prefHeight="73.0" prefWidth="863.0" style="-fx-background-color: #000000;">
+         <items>
+            <Button mnemonicParsing="false" onAction="#refreshPage" style="-fx-background-color: #ff0000;" text="Refresh" textFill="WHITE">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font></Button>
+            <Button fx:id="history" mnemonicParsing="false" onAction="#displayHistory" style="-fx-background-color: #ff0000;" text="History" textFill="WHITE">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font></Button>
+            <Button fx:id="home" mnemonicParsing="false" onAction="#homeAction" style="-fx-background-color: #ff0000;" text="Home" textFill="#f6f0f0">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font></Button>
+            <TextField fx:id="textField" prefHeight="26.0" prefWidth="464.0" promptText="Search Google or Type a URL">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font>
+            </TextField>
+            <Button fx:id="sea" mnemonicParsing="false" onAction="#seaButtonAction" style="-fx-background-color: #ff0000;" text="Go" textFill="WHITE">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#zoomIn" style="-fx-background-color: #ff0000;" text="+" textFill="WHITE">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#zoomOut" style="-fx-background-color: #ff0000;" text="-" textFill="#fffefe">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#back" style="-fx-background-color: #ff0000;" text="&lt;-" textFill="WHITE">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#forward" style="-fx-background-color: #ff0000;" text="-&gt;" textFill="WHITE">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font></Button>
+            <Button fx:id="windowid" mnemonicParsing="false" onAction="#windowAction" style="-fx-background-color: #ff0000;" text="Window" textFill="WHITE">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font></Button>
+         </items>
+      </ToolBar>
+      <Label fx:id="labels" alignment="CENTER" layoutX="306.0" layoutY="234.0" prefHeight="102.0" prefWidth="250.0" text="SearchKin" textAlignment="CENTER" textFill="#ff5c00">
+         <font>
+            <Font name="Constantia Bold" size="48.0" />
+         </font>
+      </Label>
+      <Pane fx:id="pane" layoutX="13.0" layoutY="81.0" prefHeight="248.0" prefWidth="362.0" style="-fx-background-color: #000000;">
+         <children>
+            <TextArea fx:id="textArea" prefHeight="198.0" prefWidth="362.0">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font></TextArea>
+            <Button layoutX="272.0" layoutY="209.0" mnemonicParsing="false" onAction="#exit_history" style="-fx-background-color: #ff0000;" text="Exit History" textFill="#fff5f5">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
